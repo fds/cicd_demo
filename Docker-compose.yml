@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  eureka-server:
+    image: eureka-server
+    ports:
+      - "8761:8761"
+    volumes:
+      - /usr/local/cloud/logs/eureka-server:/logs
+    container_name: "eureka-server"
+    networks:
+      - dev
+
+  service-hi:
+    image: service-hi
+    ports:
+      - "8763:8763"
+    volumes:
+      - /usr/local/cloud/logs/provider:/logs
+    container_name: "service-hi"
+    networks:
+      - dev
+    depends_on:
+      - eureka-server
+
+  service-client:
+    image: service-client
+    ports:
+      - "8764:8764"
+    volumes:
+      - /usr/local/cloud/logs/consumer:/logs
+    container_name: "service-client"
+    networks:
+      - dev
+    depends_on:
+      - eureka-server
+
+networks:
+  dev:
+    driver: bridge

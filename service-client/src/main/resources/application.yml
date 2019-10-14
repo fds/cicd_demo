@@ -1,0 +1,14 @@
+server:
+  port: 8764
+spring:
+  application:
+    name: service-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+#      defaultZone: http://172.17.0.2:8761/eureka/  #注册中心docker容器ip地址 1、docker exec -it  eureka 0d7cea7e1b7b  2、cat /etc/hosts
+
+feign:
+  hystrix:
+    enabled: true
