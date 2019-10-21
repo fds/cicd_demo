@@ -2,7 +2,7 @@ version: "3"
 
 services:
   eureka-server:
-    image: eureka-server
+    image: eureka-server:1.0
     ports:
       - "8761:8761"
     volumes:
@@ -12,7 +12,7 @@ services:
       - dev
 
   service-hi:
-    image: service-hi
+    image: service-hi:1.0
     ports:
       - "8763:8763"
     volumes:
@@ -24,7 +24,7 @@ services:
       - eureka-server
 
   service-client:
-    image: service-client
+    image: service-client:1.0
     ports:
       - "8764:8764"
     volumes:

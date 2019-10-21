@@ -4,6 +4,6 @@ MAINTAINER liss liuxinliss@163.com
 
 EXPOSE 8763
 
-COPY target/service-hi-0.0.1-SNAPSHOT.jar /service-hi-0.0.1-SNAPSHOT.jar
+COPY target/service-hi-1.0-SNAPSHOT.jar /service-hi-1.0-SNAPSHOT.jar
 
-ENTRYPOINT ["java" , "-jar" , "/service-hi-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java" , "-jar" , "/service-hi-1.0-SNAPSHOT.jar"]

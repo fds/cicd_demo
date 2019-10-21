@@ -4,9 +4,9 @@ MAINTAINER liss liuxinliss@163.com
 
 EXPOSE 8761
 
-COPY target/eureka-server-0.0.1-SNAPSHOT.jar /eureka-server-0.0.1-SNAPSHOT.jar
+COPY target/eureka-server-1.0-SNAPSHOT.jar /eureka-server-1.0-SNAPSHOT.jar
 
-ENTRYPOINT ["java" , "-jar" , "/eureka-server-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java" , "-jar" , "/eureka-server-1.0-SNAPSHOT.jar"]
 
 
 #docker run -it -d -p 8761:8761 --name eureka-server 41997de8006f
